@@ -1,0 +1,19 @@
+{
+  "name": "ueg_2",
+  "version": "1.0.0",
+  "description": "UEG website redesign",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobinLuongo/UEG_2.0.git"
+  },
+  "author": "Robin Luongo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobinLuongo/UEG_2.0/issues"
+  },
+  "homepage": "https://github.com/RobinLuongo/UEG_2.0#readme"
+}
