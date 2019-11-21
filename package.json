@@ -4,7 +4,10 @@
   "description": "UEG website redesign",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/RobinLuongo/UEG_2.0/issues"
   },
-  "homepage": "https://github.com/RobinLuongo/UEG_2.0#readme"
+  "homepage": "https://github.com/RobinLuongo/UEG_2.0#readme",
+  "dependencies": {
+    "next": "^9.1.4",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
 }
