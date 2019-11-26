@@ -1,5 +1,5 @@
 import Link from 'next/link';
-//import logo from '../public/images/UNIBLUE.png'
+import theme from './theme';
 
 export default function Navbar(props) {
     const navList = ["About", "Our Team", "Resources", "Blog"];
@@ -7,11 +7,13 @@ export default function Navbar(props) {
     return (
         <div className="nav-container">
             <div className="container">
-                <div className="logo-container">
+                <div>
                     <Link href="/">
-                        <img src='/images/UNIBLUE.png' className="nav-logo"></img>
+                        <div className="logo-container">
+                            <img src='/images/UNIBLUE.png' className="nav-logo"></img>
+                            <span className="uni-name">Uni Esports Group</span>
+                        </div>
                     </Link>
-                    <span className="uni-name">Uni Esports Group</span>
                 </div>
                 <ul className="nav-list">
                     {
@@ -30,14 +32,14 @@ export default function Navbar(props) {
         <style jsx>{`
             .nav-container {
                 height: 110px;
-                border-bottom: 1px solid blue;
             }
             .logo-container {
                 display: flex;
+                cursor: pointer;
             }
             .nav-logo {
                 width: auto;
-                height: 100px;
+                height: 110px;
             }
             .container {
                 display: flex;
@@ -47,9 +49,12 @@ export default function Navbar(props) {
                 list-style: none;
                 display: flex;
                 align-self: center;
-                color: ${props.theme.colors['dark-blue']};
+                color: ${theme.colors['dark-blue']};
                 font-weight: 600;
                 font-size: 20px;
+            }
+            .nav-link:hover {
+                color: ${theme.colors['light-blue']}
             }
             .nav-list > li > a {
                 padding: 10px 20px;
@@ -58,7 +63,7 @@ export default function Navbar(props) {
                 color: inherit;
             }
             .uni-name {
-                color: ${props.theme.colors['reg-blue']};
+                color: ${theme.colors['reg-blue']};
                 font-size: 20px;
                 align-self: center;
                 margin-left: 30px;

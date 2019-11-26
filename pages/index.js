@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar';
+import Hero from '../components/hero';
 
 function Home() {
     return (
@@ -17,6 +18,7 @@ function Home() {
                 body, html {
                     color: #2ac4ee;
                     font-family: 'Raleway', sans-serif;
+                    margin: 0px;
                 }
                 .container {
                     margin-right: auto;
@@ -26,20 +28,10 @@ function Home() {
                     width: 1170px;
                 }
             `}</style>
-            <Navbar
-                theme={theme}
-            ></Navbar>
+            <Navbar></Navbar>
+            <Hero></Hero>
         </div>
     )
-}
-
-const theme = {
-    colors: {
-        'light-blue': '#c2f0fc',
-        'med-blue': '#2ac4ee',
-        'reg-blue': '#23a3d8',
-        'dark-blue': '#1a76ba'
-    }
 }
   
 export default Home
