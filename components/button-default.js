@@ -8,6 +8,7 @@ export default function Button(props) {
                 .button-default {
                     border-radius: 7px;
                     border: 2px solid;
+                    width: fit-content;
                 }
                 .button-default:hover {
                     background-color: ${theme.colors["clear-grey"]};

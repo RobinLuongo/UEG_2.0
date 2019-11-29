@@ -1,3 +1,5 @@
 node_modules
 .next
 dev_assets
+.DS_store
+public/.DS_store

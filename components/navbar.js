@@ -32,6 +32,10 @@ export default function Navbar(props) {
         <style jsx>{`
             .nav-container {
                 height: 110px;
+                position: fixed;
+                z-index: 1000;
+                background: white;
+                width: 100%;
             }
             .logo-container {
                 display: flex;
