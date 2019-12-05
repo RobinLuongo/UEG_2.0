@@ -1,8 +1,14 @@
+import ReactModal from 'react-modal';
+import { useState } from 'react';
+
 import Button from './button-default';
 import ServiceCard from './service-card';
+import ServicesModal from './services-modal';
 import theme from './theme';
 
-export default function Services() {
+function Services() {
+    const [modalOpen, setModalOpen] = useState(false);
+
     return (
         <div className="services-container">
             <div className="container mission">
@@ -26,6 +32,7 @@ export default function Services() {
                         <ServiceCard
                             cardTitle="Individual Services"
                             cardImg="/images/Shape1.png"
+                            onClick={() => setModalOpen(true)}
                         >
                         </ServiceCard>
                         <ServiceCard
@@ -41,6 +48,12 @@ export default function Services() {
                     </div>
                 </div>
             </div>
+            <ReactModal
+                isOpen={modalOpen}
+                onRequestClose={() => setModalOpen(false)}
+            >
+                <ServicesModal></ServicesModal>
+            </ReactModal>
             <style>{`
                 .services-container {
                     margin-top: 50px;
@@ -81,8 +94,11 @@ export default function Services() {
             `}</style>
         </div>
     )
+
+    function handleButtonClick() {
+    }
+
+
 }
 
-function handleButtonClick() {
-    return;
-}
+export default Services;

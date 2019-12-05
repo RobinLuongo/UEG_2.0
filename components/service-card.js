@@ -2,7 +2,7 @@ import theme from './theme'
 
 export default function ServiceCard(props) {
     return (
-        <div className="card-container">
+        <div className="card-container" onClick={props.onClick}>
             <div className="card-border">
                 <div className="card-title">
                     {props.cardTitle}
@@ -20,13 +20,12 @@ export default function ServiceCard(props) {
                     margin-left: 50px;
                     align-self: center;
                     box-shadow: 0px 16px 14px 0px #6d6d6d;
+                    transition: width 0.1s ease-out, height 0.1s ease-out;
                 }
                 .card-container:hover {
-                    width: 300px;
-                    height: 450px;
+                    width: 295px;
+                    height: 445px;
                     cursor: pointer;
-                    // margin-left: 30px;
-                    // margin-right: 0px;
                 }
                 .card-border {
                     display: flex;

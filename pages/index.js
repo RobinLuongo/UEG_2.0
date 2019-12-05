@@ -51,6 +51,15 @@ function Home() {
                     letter-spacing: 1px;
                     font-weight: 600;
                 }
+                .ReactModal__Content {
+                    padding: 0px !important;
+                    width: fit-content;
+                    height: fit-content;
+                    margin: auto;
+                }
+                .ReactModal__Overlay {
+                    z-index: 1001;
+                }
             `}</style>
         </div>
     )
