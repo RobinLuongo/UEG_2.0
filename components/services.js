@@ -54,10 +54,9 @@ function Services() {
             >
                 <ServicesModal></ServicesModal>
             </ReactModal>
-            <style>{`
+            <style jsx>{`
                 .services-container {
-                    margin-top: 50px;
-                    margin-bottom: 50px;
+                    margin: 50px 0px;
                 }
                 .mission {
                     display: flex;
@@ -68,7 +67,8 @@ function Services() {
                     color: ${theme.colors["dark-blue"]}
                 }
                 .services-text {
-                    margin-top: 100px;
+                    margin-top: 50px;
+                    margin-bottom: 50px;
                 }
                 .cards-container {
                     max-width: 1300px;

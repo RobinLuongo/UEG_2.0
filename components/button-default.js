@@ -2,13 +2,19 @@ import theme from './theme';
 
 export default function Button(props) {
     return (
-        <div className={`button-default ${props.className}`} onClick={props.onClick()}>
+        <a className={`button-default ${props.className}`} onClick={props.onClick ? props.onClick() : ''}>
             <span className="button-text">{props.text}</span>
-            <style>{`
+            {
+                props.download ?
+                    <a href={props.downloadPath} download></a> :
+                    ""
+            }
+            <style jsx>{`
                 .button-default {
                     border-radius: 7px;
                     border: 2px solid;
                     width: fit-content;
+                    display: block;
                 }
                 .button-default:hover {
                     background-color: ${theme.colors["clear-grey"]};
@@ -21,6 +27,6 @@ export default function Button(props) {
                     cursor: pointer;
                 }
             `}</style>
-        </div>
+        </a>
     )
 }

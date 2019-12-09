@@ -4,6 +4,9 @@ import theme from '../components/theme'
 import Navbar from '../components/Navbar';
 import Hero from '../components/hero';
 import Services from '../components/services';
+import WhitepaperTeaser from '../components/whitepaper-teaser';
+import PricetoolTeaser from '../components/price-tool-teaser';
+import Partners from '../components/partners';
 
 function Home() {
     return (
@@ -16,9 +19,10 @@ function Home() {
             <Navbar></Navbar>
             <div className="main">
                 <Hero></Hero>
-                <div>
-                    <Services></Services>
-                </div>
+                <Services></Services>
+                <WhitepaperTeaser></WhitepaperTeaser>
+                <PricetoolTeaser></PricetoolTeaser>
+                <Partners></Partners>
             </div>
             <style global jsx>{ `
                 * {
@@ -28,6 +32,7 @@ function Home() {
                     color: #2ac4ee;
                     font-family: 'Raleway', sans-serif;
                     margin: 0px;
+                    background-color: #ecfbff;
                 }
                 .main {
                     top: 110px;

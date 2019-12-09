@@ -10,7 +10,7 @@ export default function ServiceCard(props) {
                 <div className="click-text">click to see more</div>
                 <img className="card-img" src={props.cardImg}></img>
             </div>
-            <style>{`
+            <style jsx>{`
                 .card-container {
                     width: 275px;
                     height: 425px;
