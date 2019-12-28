@@ -1,5 +1,5 @@
 import theme from './theme';
-import Button from './button-default';
+import Button from './button-download';
 
 export default function WPTeaser() {
     return (
@@ -20,7 +20,7 @@ export default function WPTeaser() {
                 <Button
                     className="wp-button"
                     text="Download"
-                    download={true}
+                    fileName="UEG_whitepaper.pdf"
                     downloadPath="/docs/UEG_whitepaper_1.pdf"
                 >
                 </Button>

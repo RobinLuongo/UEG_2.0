@@ -4,7 +4,8 @@ export default function Button(props) {
     return (
         <a
         className={`button-default ${props.className}`}
-        onClick={props.onClick ? props.onClick : () => ''}
+        download={props.fileName}
+        href={props.downloadPath}
         >
             <span className="button-text">{props.text}</span>
             <style jsx>{`

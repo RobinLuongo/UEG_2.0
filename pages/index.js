@@ -7,6 +7,7 @@ import Services from '../components/services';
 import WhitepaperTeaser from '../components/whitepaper-teaser';
 import PricetoolTeaser from '../components/price-tool-teaser';
 import Partners from '../components/partners';
+import Contact from '../components/contact';
 
 function Home() {
     return (
@@ -23,6 +24,7 @@ function Home() {
                 <WhitepaperTeaser></WhitepaperTeaser>
                 <PricetoolTeaser></PricetoolTeaser>
                 <Partners></Partners>
+                <Contact></Contact>
             </div>
             <style global jsx>{ `
                 * {

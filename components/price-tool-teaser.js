@@ -40,10 +40,9 @@ export default function PTTeaser() {
                     width: 100%;
                     height: 250px;
                     background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(42,196,238,1) 70%, rgba(26,118,186,1) 100%);
-                    position: relative;
                     box-shadow: 0px 8px 13px 9px #00000052;
                 }
-                .pt-banner > container {
+                .pt-banner > .container {
                     position: relative;
                 }       
                 .pt-img {
