@@ -41,6 +41,7 @@ export default function ServiceCard(props) {
                     align-self: center;
                     height: 50px;
                     margin-top: 50px;
+                    padding: 0px 10px;
                     text-align: center;
                 }
                 .click-text {

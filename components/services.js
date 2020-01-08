@@ -7,7 +7,10 @@ import ServicesModal from './services-modal';
 import theme from './theme';
 
 function Services() {
-    const [modalOpen, setModalOpen] = useState(false);
+    const [modalState, setModalState] = useState({
+        isOpen: false,
+        card: "data"
+    });
 
     return (
         <div className="services-container">
@@ -30,29 +33,41 @@ function Services() {
                 <div>
                     <div className="cards-inner">
                         <ServiceCard
-                            cardTitle="Individual Services"
+                            cardTitle="Esports Data Collection & Analysis"
                             cardImg="/images/Shape1.png"
-                            onClick={() => setModalOpen(true)}
+                            onClick={() => setModalState({
+                                card: "data",
+                                isOpen: true
+                            })}
                         >
                         </ServiceCard>
                         <ServiceCard
-                            cardTitle="Comprehensive Esports Consulting"
+                            cardTitle="Select Services"
                             cardImg="/images/Shape2.png"
+                            onClick={() => setModalState({
+                                card: "services",
+                                isOpen: true
+                            })}
                         >
                         </ServiceCard>
                         <ServiceCard
-                            cardTitle="On-campus Workshops"
+                            cardTitle="Uni On-campus Workshops"
                             cardImg="/images/Shape3.png"
+                            onClick={() => setModalState({
+                                card: "workshops",
+                                isOpen: true
+                            })}
                         >
                         </ServiceCard>
                     </div>
                 </div>
             </div>
             <ReactModal
-                isOpen={modalOpen}
-                onRequestClose={() => setModalOpen(false)}
+                isOpen={modalState.isOpen}
+                onRequestClose={() => setModalState({})}
             >
-                <ServicesModal></ServicesModal>
+                <ServicesModal>
+                </ServicesModal>
             </ReactModal>
             <style jsx>{`
                 .services-container {
