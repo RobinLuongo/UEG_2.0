@@ -1,25 +1,26 @@
 import theme from './theme';
-import Button from './button-default';
+import Button from './button-download';
 
 export default function PTTeaser() {
     return (
         <div className="pt-container">
-                <h1 className="default-heading container">Price Tool</h1>
+                <h1 className="default-heading container">The Architects of Collegiate Esports Interviews</h1>
             <div className="pt-banner">
                 <div className="container">
                     <div className="pt-text">
-                        <h3>State of the Game: Collegiate Esports and the Future of Gaming in Higher Education</h3>
-                        <p className="default-text">Compiled from data gathered from over 400 Athletic Directors from colleges around the country, our White paper provides the most accurate snapshot of the collegiate esports space.</p>
+                        <p className="default-text">In this interview series with Mark Deppe (Director, UC Irvine Esports), Glenn Platt (Director, Miami University Esports), and AJ Dimick (Director, University of Utah Esports), we bring three of the leading voices in collegiate esports together to discuss the process of developing and institutionalizing a collegiate esports program.</p>
                     </div>
                     <a href="/docs/UEG_whitepaper_1.pdf" download>
-                        <img src="/images/whitepaper_thumbnail.jpg" className="pt-img" alt="UEG collegiate esports whitepaper - athletic directors"></img>
+                        <img src="/images/interview_thumb.PNG" className="pt-img" alt="download UEG collegiate esports interviews"></img>
                     </a>
                 </div>
             </div>
             <div className="container">
                 <Button
-                    text="Price Tool"
+                    text="Download"
                     className="ptt-button"
+                    fileName="The Architects of Collegiate Esports.pdf"
+                    downloadPath="/docs/The_Architects_of_Collegiate_Esports.pdf"
                 >
                 </Button>
             </div>

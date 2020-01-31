@@ -10,6 +10,7 @@ export default function Button(props) {
             <span className="button-text">{props.text}</span>
             <style jsx>{`
                 .button-default {
+                    color: ${theme.colors["med-blue"]};
                     border-radius: 7px;
                     border: 2px solid;
                     width: fit-content;
