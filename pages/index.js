@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 import theme from '../components/theme'
-import Navbar from '../components/Navbar';
+import Navbar from '../components/navbar';
 import Hero from '../components/hero';
 import Services from '../components/services';
 import WhitepaperTeaser from '../components/whitepaper-teaser';
