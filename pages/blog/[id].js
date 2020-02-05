@@ -3,7 +3,7 @@ import Head from 'next/head';
 import fetch from 'isomorphic-unfetch';
 
 function Post(props) {
-    if (props.data != '') {
+    if (props.data.title) {
         return (
             <>
             <Head>
@@ -22,8 +22,11 @@ function Post(props) {
 }
 
 Post.getInitialProps = async function({query}) {
-    const res = await fetch(`http://localhost:3000/content/${query.id}.json`);
-    const data = query.id ? await res.json() : ''
+    let data = {};
+    if (query.id) {
+        const res = await fetch(`http://localhost:3000/content/${query.id}.json`);
+        data = await res.json();
+    }
   
     console.log(`Data fetched. Count: ${data}`);
   
