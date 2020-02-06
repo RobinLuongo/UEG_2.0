@@ -1,5 +1,5 @@
 const { PHASE_DEVELOPMENT_SERVER } = require('next/constants');
-const fs = require('fs');
+const fs = require('fs').promises;
 
 module.exports = (phase, { defaultConfig }) => {
   if (phase === PHASE_DEVELOPMENT_SERVER) {
@@ -11,13 +11,12 @@ module.exports = (phase, { defaultConfig }) => {
       },
       exportPathMap: async function(defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
         let blogMap = {}
-        await fs.readdir(`${dir}/public/content/`, (err, files) => {
-            console.log(files)
-            files.forEach(file => {
-                let cleanFile = file.slice(0, -5);
-                blogMap['/blog/' + cleanFile] = { page: '/blog/[id]', query: { id: cleanFile} }
-            })
+        let files = await fs.readdir(`${dir}/public/content/`);
+        files.forEach(file => {
+            let cleanFile = file.slice(0, -5);
+            blogMap['/blog/' + cleanFile] = { page: '/blog/post', query: { id: cleanFile} }
         })
+        console.log(blogMap)
         return blogMap;
       }
     }
@@ -31,14 +30,13 @@ module.exports = (phase, { defaultConfig }) => {
         },
         exportPathMap: async function(defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
             let blogMap = {}
-            await fs.readdir(`${dir}/public/content/`, (err, files) => {
-                console.log(files)
-                files.forEach(file => {
-                    let cleanFile = file.slice(0, -5);
-                    blogMap['/blog/' + cleanFile] = { page: '/blog/[id]', query: { id: cleanFile} }
-                })
+            let files = await fs.readdir(`${dir}/public/content/`);
+            files.forEach(file => {
+                let cleanFile = file.slice(0, -5);
+                blogMap['/blog/' + cleanFile] = { page: '/blog/post', query: { id: cleanFile} }
             })
+            console.log(blogMap)
             return blogMap;
-          }
+        }
     }
 }
