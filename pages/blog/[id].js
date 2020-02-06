@@ -63,8 +63,9 @@ function Post(props) {
 
 Post.getInitialProps = async function({query}) {
     let data = {};
+
     if (query.id) {
-        const res = await fetch(`http://localhost:3000/content/${query.id}.json`);
+        const res = await fetch(`${process.env.baseUrl}/content/${query.id}.json`);
         data = await res.json();
     }
   
