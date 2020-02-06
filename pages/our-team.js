@@ -1,5 +1,5 @@
 export default function OurTeam() {
     return (
-        <div>Our Meme Team :)</div>
+        <div className="container">Our Meme Team :)</div>
     )
 }

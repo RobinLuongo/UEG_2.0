@@ -2,7 +2,6 @@ import Link from 'next/link';
 import theme from './theme';
 
 export default function Navbar(props) {
-    const navList = ["About", "Our Team", "Resources", "Blog"];
 
     return (
         <div className="nav-container">
@@ -16,23 +15,33 @@ export default function Navbar(props) {
                     </Link>
                 </div>
                 <ul className="nav-list">
-                    {
-                        navList.map((section, i) => {
-                            return (
-                                <li className="nav-link" key={i}>
-                                    <a onClick={(e) => {scrollTo(e, section); if(mobile){handleClick(e)}}} href="/">
-                                    {section}
-                                    </a>
-                                </li>
-                            )
-                        })
-                    }
+                    <li>
+                        <a className="nav-link" onClick={(e) => {scrollTo(e, section); if(mobile){handleClick(e)}}} href="/">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <Link href="/our-team">
+                            <a className="nav-link">Our Team</a>
+                        </Link>
+                    </li>
+                    <li>
+                        <a className="nav-link" onClick={(e) => {scrollTo(e, section); if(mobile){handleClick(e)}}} href="/">
+                            Resources
+                        </a>
+                    </li>
+                    <li>
+                        <Link href="/blog/2020-02-05-jesus" className="nav-link">
+                            <a className="nav-link">Blog</a>
+                        </Link>
+                    </li>
                 </ul>
             </div>
         <style jsx>{`
             .nav-container {
                 height: 110px;
                 position: fixed;
+                top: 0;
                 z-index: 1000;
                 background: white;
                 width: 100%;
@@ -60,7 +69,7 @@ export default function Navbar(props) {
             .nav-link:hover {
                 color: ${theme.colors['light-blue']}
             }
-            .nav-list > li > a {
+            .nav-link {
                 padding: 10px 20px;
                 line-height: 45px;
                 text-decoration: none;
