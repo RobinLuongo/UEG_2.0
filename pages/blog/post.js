@@ -62,18 +62,14 @@ function Post(props) {
 }
 
 Post.getInitialProps = async function({query}) {
-    let data = {};
-
-    if (query.id) {
-        const res = await fetch(`${process.env.baseUrl}/content/${query.id}.json`);
-        data = await res.json();
-    }
+    // if (query.id) {
+    //     const res = await fetch(`${process.env.baseUrl}/content/${query.id}.json`);
+    //     data = await res.json();
+    // }
   
-    console.log(`Data fetched. Count: ${data}`);
+    // console.log(`Data fetched. Count: ${data}`);
   
-    return {
-      data
-    };
+    return query
   };
   
 

@@ -12,10 +12,11 @@ module.exports = (phase, { defaultConfig }) => {
       exportPathMap: async function(defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
         let blogMap = {}
         let files = await fs.readdir(`${dir}/public/content/`);
-        files.forEach(file => {
+        for (let file of files) {
             let cleanFile = file.slice(0, -5);
-            blogMap['/blog/' + cleanFile] = { page: '/blog/post', query: { id: cleanFile} }
-        })
+            let contents = await fs.readFile(`${dir}/public/content/${file}`)
+            blogMap['/blog/' + cleanFile] = { page: '/blog/post', query: { id: cleanFile, data: JSON.parse(contents.toString())} }
+        }
         console.log(blogMap)
         return blogMap;
       }
@@ -31,12 +32,13 @@ module.exports = (phase, { defaultConfig }) => {
         exportPathMap: async function(defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
             let blogMap = {}
             let files = await fs.readdir(`${dir}/public/content/`);
-            files.forEach(file => {
+            for (let file of files) {
                 let cleanFile = file.slice(0, -5);
-                blogMap['/blog/' + cleanFile] = { page: '/blog/post', query: { id: cleanFile} }
-            })
+                let contents = await fs.readFile(`${dir}/public/content/${file}`)
+                blogMap['/blog/' + cleanFile] = { page: '/blog/post', query: { id: cleanFile, data: JSON.parse(contents.toString())} }
+            }
             console.log(blogMap)
             return blogMap;
-        }
+          }
     }
 }
