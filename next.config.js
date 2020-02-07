@@ -12,7 +12,8 @@ module.exports = (phase, { defaultConfig }) => {
       exportPathMap: async function(defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
         const map = {
           '/blog': { page: '/blog/landing' , query: {}},
-          '/our-team': { page: '/our-team', query: {}}
+          '/our-team': { page: '/our-team', query: {}},
+          '/': { page: '/', query: {}}
         }
         const files = await fs.readdir(`${dir}/public/content/`);
         for (const file of files) {
@@ -35,7 +36,8 @@ module.exports = (phase, { defaultConfig }) => {
         exportPathMap: async function(defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
           const map = {
             '/blog': { page: '/blog/landing' , query: {}},
-            '/our-team': { page: '/our-team', query: {}}
+            '/our-team': { page: '/our-team', query: {}},
+            '/': { page: '/', query: {}}
           }
           const files = await fs.readdir(`${dir}/public/content/`);
           for (const file of files) {
