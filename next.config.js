@@ -10,7 +10,7 @@ module.exports = (phase, { defaultConfig }) => {
           baseUrl: 'http://localhost:3000'
       },
       exportPathMap: async function(defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
-        const blogMap = {
+        const map = {
           '/blog': { page: '/blog/landing' , query: {}},
           '/our-team': { page: '/our-team', query: {}}
         }
@@ -18,10 +18,10 @@ module.exports = (phase, { defaultConfig }) => {
         for (const file of files) {
             const cleanFile = file.slice(0, -5);
             const contents = await fs.readFile(`${dir}/public/content/${file}`);
-            blogMap['/blog/' + cleanFile] = { page: '/blog/post', query: { id: cleanFile, data: JSON.parse(contents.toString())} };
+            map['/blog/' + cleanFile] = { page: '/blog/post', query: { id: cleanFile, data: JSON.parse(contents.toString())} };
         }
-        console.log(blogMap)
-        return blogMap;
+        console.log(map)
+        return map;
       }
     }
   }
@@ -33,15 +33,18 @@ module.exports = (phase, { defaultConfig }) => {
             baseUrl: 'https://netlify--boring-bhaskara-4998bb.netlify.com'
         },
         exportPathMap: async function(defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
-            const blogMap = {}
-            const files = await fs.readdir(`${dir}/public/content/`);
-            for (const file of files) {
-                const cleanFile = file.slice(0, -5);
-                const contents = await fs.readFile(`${dir}/public/content/${file}`)
-                blogMap['/blog/' + cleanFile] = { page: '/blog/post', query: { id: cleanFile, data: JSON.parse(contents.toString())} }
-            }
-            console.log(blogMap)
-            return blogMap;
+          const map = {
+            '/blog': { page: '/blog/landing' , query: {}},
+            '/our-team': { page: '/our-team', query: {}}
           }
+          const files = await fs.readdir(`${dir}/public/content/`);
+          for (const file of files) {
+              const cleanFile = file.slice(0, -5);
+              const contents = await fs.readFile(`${dir}/public/content/${file}`);
+              map['/blog/' + cleanFile] = { page: '/blog/post', query: { id: cleanFile, data: JSON.parse(contents.toString())} };
+          }
+          console.log(map)
+          return map;
+        }
     }
 }
