@@ -16,7 +16,7 @@ export default function Navbar(props) {
                 </div>
                 <ul className="nav-list">
                     <li>
-                        <a className="nav-link" onClick={(e) => {scrollTo(e, section); if(mobile){handleClick(e)}}} href="/">
+                        <a className="nav-link" onClick={(e) => {scrollTo(e, section); if(mobile){handleClick(e)}}}>
                             About
                         </a>
                     </li>
@@ -26,12 +26,12 @@ export default function Navbar(props) {
                         </Link>
                     </li>
                     <li>
-                        <a className="nav-link" onClick={(e) => {scrollTo(e, section); if(mobile){handleClick(e)}}} href="/">
+                        <a className="nav-link" onClick={(e) => {scrollTo(e, section); if(mobile){handleClick(e)}}}>
                             Resources
                         </a>
                     </li>
                     <li>
-                        <Link href="/blog/2020-02-05-jesus">
+                        <Link href="/blog/">
                             <a className="nav-link">Blog</a>
                         </Link>
                     </li>
@@ -74,6 +74,7 @@ export default function Navbar(props) {
                 line-height: 45px;
                 text-decoration: none;
                 color: inherit;
+                cursor: pointer;
             }
             .uni-name {
                 color: ${theme.colors['reg-blue']};
