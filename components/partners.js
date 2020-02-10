@@ -3,7 +3,7 @@ export default function Partners() {
         <div className="partners-container container">
             <h1 className="default-heading">Our Partners</h1>
             <p className="default-text">
-                Connect with our premier network of industry partners. From computers to coaches - we've got you covered. We connect you to the industry partnerships you need to build and sustain your profram. Our partners work at every level of the esports pipelane, providing support in facilities, hardware and peripherals, recruitment, coaching, league membership, broadcasting and other areas crucial to your esports launch.
+                Connect with our premier network of industry partners. From computers to coaches - we've got you covered. We connect you to the industry partnerships you need to build and sustain your program. Our partners work at every level of the esports pipelane, providing support in facilities, hardware and peripherals, recruitment, coaching, league membership, broadcasting and other areas crucial to your esports launch.
             </p>
             <div className="logos-container">
                 <img className="partner-logo" src="/images/MSI.png"></img>
@@ -24,7 +24,8 @@ export default function Partners() {
                 }
                 .logos-container {
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: space-evenly;
+                    flex-wrap: wrap;
                     margin-top: 20px;
                 }
                 .partner-logo {

@@ -39,7 +39,7 @@ export default function Layout(props) {
                     margin-left: auto;
                     padding-left: 15px;
                     padding-right: 15px;
-                    width: 1170px;
+                    max-width: 1170px;
                 }
                 .default-text {
                     font-size: 20px;

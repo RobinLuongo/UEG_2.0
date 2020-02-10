@@ -11,7 +11,7 @@ export default function WPTeaser() {
                         <img src="/images/whitepaper_thumbnail.jpg" className="wp-img" alt="UEG collegiate esports whitepaper - athletic directors"></img>
                     </a>
                     <div className="wp-text">
-                        <h3>State of the Game: Collegiate Esports and the Future of Gaming in Higher Education</h3>
+                        <h3>Lessons From the First Wave: An Empirical Framework for Institutionalizing Esports on Campus</h3>
                         <p className="default-text">This rubric synthesizes data gained from three in-depth interviews and dozens of conversations with directors of esports programs at institutions of higher education in the US regarding the common obstacles, strategies, and outcomes associated with the launch and growth of a high-quality esports program.</p>
                     </div>
                 </div>
@@ -20,14 +20,15 @@ export default function WPTeaser() {
                 <Button
                     className="wp-button"
                     text="Download"
-                    fileName="UEG_whitepaper.pdf"
-                    downloadPath="/docs/UEG_whitepaper_1.pdf"
+                    fileName="UEG_Program_Rubric.pdf"
+                    downloadPath="/docs/UEG_Esports_Program_Rubric.pdf"
                 >
                 </Button>
             </div>
             <style jsx>{`
                 .wpt-container {
                     margin-bottom: 200px;
+                    padding-top: 50px;
                 }
                 .wpt-content {
                     display: flex;
@@ -44,7 +45,12 @@ export default function WPTeaser() {
                     background: linear-gradient(275deg, rgba(0,212,255,1) 0%, rgba(42,196,238,1) 70%, rgba(26,118,186,1) 100%);
                     position: relative;
                     box-shadow: 0px 8px 13px 9px #00000052;
-                }                
+                }
+                .wp-banner > .container {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                }          
                 .wp-img {
                     height: 350px;
                     width: auto;
@@ -55,16 +61,39 @@ export default function WPTeaser() {
                 .wp-text {
                     color: ${theme.colors["dark-blue"]};
                     margin-left: 400px;
-                    padding-top: 20px;
                 }
                 .wp-text h3 {
                     font-size: 26px;
                     line-height: 30px;
-                    margin-bottom: 0px;
+                    margin: 0px;
                 }
                 .wp-text p {
                     margin-top: 10px;
+                    margin-bottom: 0px;
                     line-height: 30px;
+                }
+                @media(max-width: 900px) {
+                    .wpt-container {
+                        padding-top: 30px;
+                    }
+                    .wp-banner {
+                        background: inherit;
+                        box-shadow: none;
+                        height: fit-content;
+                    }
+                    .wp-banner > .container {
+                        flex-direction: column;
+                    }
+                    .wp-img {
+                        position: inherit;
+                        margin-bottom: 50px;
+                    }
+                    .wp-text {
+                        margin: 0px;
+                    }
+                    .default-heading {
+                        text-align: center;
+                    }
                 }
             `}</style>
             <style>{`

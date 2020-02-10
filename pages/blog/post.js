@@ -10,18 +10,22 @@ function Post(props) {
         return (
             <>
                 <Head>
+                    <title>{props.data.title} | Uni Esports Group</title>
                     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+                    <meta name="description">{props.data.description}</meta>
                 </Head>
                 <article>
                     <h1 className="blog-title">{props.data.title}</h1>
                     <div className="dateline">by {props.data.author} on {props.data.date}</div>
                     <div className="br"></div>
+                    <img src={props.data.thumbnail} className="blog-thumb"></img>
                     <ReactMarkdown source={props.data.body} className="blog-content"/>
                 </article>
                 <style>{`
                     article {
                         margin: auto;
                         max-width: 800px;
+                        padding: 0px 30px;
                     }
                     .blog-title {
                         font-size: 46px;
@@ -34,6 +38,10 @@ function Post(props) {
                     .br {
                         border-bottom: 2px solid #80808057;
                         margin: 10px 0px;
+                    }
+                    .blog-thumb {
+                        width: 100%;
+                        margin-top: 10px;
                     }
                     .blog-content {
                         margin-top: 20px;
@@ -49,7 +57,10 @@ function Post(props) {
                     .blog-content > p {
                         font-size: 22px;
                         line-height: 1.5;
-                        color: #828282;
+                        color: #4c4c4c;
+                    }
+                    .blog-content a {
+                        color: inherit;
                     }
                 `}</style>
             </>
@@ -62,15 +73,8 @@ function Post(props) {
 }
 
 Post.getInitialProps = async function({query}) {
-    // if (query.id) {
-    //     const res = await fetch(`${process.env.baseUrl}/content/${query.id}.json`);
-    //     data = await res.json();
-    // }
-  
-    // console.log(`Data fetched. Count: ${data}`);
-  
     return query
-  };
+};
   
 
 export default Post;

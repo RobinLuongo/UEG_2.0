@@ -1,6 +1,8 @@
 import ReactModal from 'react-modal';
 import { useState } from 'react';
 
+import { useRouter } from 'next/router'
+
 import Button from './button-default';
 import ServiceCard from './service-card';
 import ServicesModal from './services-modal';
@@ -11,6 +13,8 @@ function Services() {
         isOpen: false,
         card: "data"
     });
+
+    const router = useRouter();
 
     return (
         <div className="services-container">
@@ -30,8 +34,8 @@ function Services() {
                 </p>
             </div>
             <div className="cards-container">
-                <div>
-                    <div className="cards-inner">
+                <div className="bg-container"></div>
+                <div className="cards-inner">
                         <ServiceCard
                             cardTitle="Esports Data Collection & Analysis"
                             cardImg="/images/Shape1.png"
@@ -60,13 +64,12 @@ function Services() {
                         >
                         </ServiceCard>
                     </div>
-                </div>
             </div>
             <ReactModal
                 isOpen={modalState.isOpen}
                 onRequestClose={() => setModalState({})}
             >
-                <ServicesModal>
+                <ServicesModal content={modalState.card}>
                 </ServicesModal>
             </ReactModal>
             <style jsx>{`
@@ -88,15 +91,17 @@ function Services() {
                 .cards-container {
                     max-width: 1300px;
                     margin: 35px auto;
-                    display: flex;
-                }
-                .cards-container > div {
-                    align-self: center;
-                    width: 100%;
                     height: 450px;
                     position: relative;
+                }
+                .bg-container {
+                    width: 100%;
+                    height: 450px;
+                    position: absolute;
                     background-image: url("/images/network.png");
-                    background-size: contain;
+                    background-position: center;
+                    background-size: 1300px;
+                    background-repeat: no-repeat;
                 }
                 .cards-inner {
                     display: flex;
@@ -106,11 +111,18 @@ function Services() {
                     width: 100%;
                     height: 470px;
                 }
+                :global(.card-container:first-child) {
+                    margin-left: 30px;
+                }
+                :global(.card-container:nth-child(3)) {
+                    margin-right: 30px;
+                }
             `}</style>
         </div>
     )
 
     function handleButtonClick() {
+        router.push('/our-team')
     }
 
 
