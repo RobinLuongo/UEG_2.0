@@ -75,6 +75,7 @@ export default function WPTeaser() {
                 @media(max-width: 900px) {
                     .wpt-container {
                         padding-top: 30px;
+                        margin-bottom: 100px;
                     }
                     .wp-banner {
                         background: inherit;

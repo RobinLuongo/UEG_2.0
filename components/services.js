@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import Button from './button-default';
 import ServiceCard from './service-card';
 import ServicesModal from './services-modal';
+import ServicesMobile from './services-mobile';
 import theme from './theme';
 
 function Services() {
@@ -65,6 +66,7 @@ function Services() {
                         </ServiceCard>
                     </div>
             </div>
+            <ServicesMobile />
             <ReactModal
                 isOpen={modalState.isOpen}
                 onRequestClose={() => setModalState({})}
@@ -116,6 +118,11 @@ function Services() {
                 }
                 :global(.card-container:nth-child(3)) {
                     margin-right: 30px;
+                }
+                @media(max-width: 900px) {
+                    .cards-container {
+                        display: none;
+                    }
                 }
             `}</style>
         </div>

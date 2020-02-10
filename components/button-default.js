@@ -13,6 +13,9 @@ export default function Button(props) {
                     border: 2px solid;
                     width: fit-content;
                     display: block;
+                    margin-top: 10px;
+                    align-self: flex-end;
+                    ${props.styles}
                 }
                 .button-default:hover {
                     background-color: ${theme.colors["clear-grey"]};
@@ -23,6 +26,11 @@ export default function Button(props) {
                     display: inline-block;
                     letter-spacing: 1px;
                     cursor: pointer;
+                }
+                @media(max-width: 900px) {
+                    .button-text {
+                        font-size: 16px;
+                    }
                 }
             `}</style>
         </a>

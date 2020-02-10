@@ -72,6 +72,32 @@ export default function PTTeaser() {
                     margin-bottom: 0px;
                     line-height: 30px;
                 }
+                @media(max-width: 900px) {
+                    .pt-container {
+                        padding-top: 30px;
+                    }
+                    .pt-banner {
+                        background: inherit;
+                        box-shadow: none;
+                        height: fit-content;
+                    }
+                    .pt-banner > .container {
+                        flex-direction: column;
+                    }
+                    .container > a {
+                        order: -1;
+                    }
+                    .pt-img {
+                        position: inherit;
+                        margin-bottom: 50px;
+                    }
+                    .pt-text {
+                        margin: 0px;
+                    }
+                    .default-heading {
+                        text-align: center;
+                    }
+                }
             `}</style>
             <style>{`
                 .ptt-button {

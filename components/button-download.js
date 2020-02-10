@@ -26,6 +26,11 @@ export default function Button(props) {
                     letter-spacing: 1px;
                     cursor: pointer;
                 }
+                @media(max-width: 900px) {
+                    .button-text {
+                        font-size: 16px;
+                    }
+                }
             `}</style>
         </a>
     )

@@ -2,6 +2,10 @@ import theme from './theme';
 import Button from './button-default';
 
 export default function Hero(props) {
+    const buttonStyles = `
+                    background-color: #3333339c;
+    `
+
     return (
         <div>
             <div className="hero-container">
@@ -12,6 +16,7 @@ export default function Hero(props) {
                     <Button className="button"
                         text="Services"
                         onClick={scrollToServices}
+                        styles={buttonStyles}
                     >
                     </Button>
                 </div>
@@ -21,12 +26,13 @@ export default function Hero(props) {
                     <span>Competitive Excellence | Diversity and Inclusion | Student Engagement</span>
                 </div>
             </div>
-            <style>{`
+            <style jsx>{`
                     .hero-container {
-                        background-image: url("/images/hero.jpg");
+                        background-image: url("/images/student.jpg");
                         background-size: 100% auto;
+                        background-position: center;
                         background-repeat: no-repeat;
-                        height: 600px;
+                        height: 35vw;
                         display: flex;
                         justify-content: center;
                     }
@@ -38,7 +44,7 @@ export default function Hero(props) {
                     }
                     .tagline-box {
                         color: ${theme.colors['med-blue']};
-                        background-color: #33333347;
+                        background-color: #3333339c;;
                         align-self: center;
                         font-size: 30px;
                         padding: 60px;
@@ -48,8 +54,7 @@ export default function Hero(props) {
                         box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
                     }
                     .button {
-                        margin-top: 10px;
-                        align-self: flex-end;
+                        background-color: #3333339c;
                     }
                     .pillars-container {
                         background-color: ${theme.colors["med-blue"]};
@@ -67,11 +72,37 @@ export default function Hero(props) {
                         font-weight: 900;
                         letter-spacing: 1px;
                     }
+                    @media(max-width: 900px) {
+                        .hero-container {
+                            height: 60vw;
+                            background-size: 100% 100%;
+                        }
+                        .tagline-box {
+                            font-size: 24px;
+                            padding: 30px;
+                        }
+                        .pillars-container {
+                            font-size: 16px;
+                        }
+                    }
+                    @media(max-width: 480px) {
+                        .hero-container {
+                            height: 300px;
+                        }
+                        .tagline-box {
+                            margin: 0px 20px;
+                        }
+                    }
                 `}</style>
         </div>
     )
 }
 
 function scrollToServices() {
-    console.log("clicked")
+    const element = document.querySelector('.mission')
+    window.scroll({
+        top: element.offsetTop - 100,
+        left: 0,
+        behavior: 'smooth'
+    })
 }

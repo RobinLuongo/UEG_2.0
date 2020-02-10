@@ -61,6 +61,14 @@ export default function Layout(props) {
                 .ReactModal__Overlay {
                     z-index: 1001;
                 }
+                @media(max-width: 900px) {
+                    .default-text {
+                        font-size: 14px;
+                    }
+                    .default-heading {
+                        font-size: 24px;
+                    }
+                }
             `}</style>
     </div>
     )

@@ -158,6 +158,20 @@ export default function Contact() {
                       transform: rotate(360deg);
                     }
                   }
+                  @media (max-width: 600px) {
+                      .input-wrpr {
+                          flex-direction: column;
+                          width: 100%;
+                      }
+                      .input-wrpr > label {
+                          align-self: start;
+                          margin-bottom: 10px;
+                      }
+                      .contact-input {
+                          width: 100%;
+                          align-self: start;
+                      }
+                  }
             `}</style>
         </div>
     )
