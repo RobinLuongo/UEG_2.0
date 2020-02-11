@@ -8,12 +8,13 @@ export default function Layout(props) {
         <div className="page-layout">
             <Head>
             {/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157421603-1"></script>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158266919-1"></script>
                 <script dangerouslySetInnerHTML={{__html:`
                     window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments)}
+                    function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
-                    gtag('config', 'UA-157421603-1');
+                  
+                    gtag('config', 'UA-158266919-1');
                 `}} />
                 <title>Uni Esports Group</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
