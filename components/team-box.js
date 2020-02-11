@@ -14,6 +14,7 @@ export default function TeamBox(props) {
             <style jsx>{`
                 .default-text.bio {
                     font-size: 18px;
+                    text-align: justify;
                 }
                 .box-container {
                     text-align: center;

@@ -27,7 +27,7 @@ export default function Navbar(props) {
                 </div>
                 <ul className="nav-list">
                     <li>
-                        <a className="nav-link" onClick={(e) => {scrollTo(e, '.mission', '/'); if(mobile){handleClick(e)}}}>
+                        <a className="nav-link" onClick={(e) => handleNav(e, '/', '.mission')}>
                             About
                         </a>
                     </li>
@@ -35,7 +35,7 @@ export default function Navbar(props) {
                         <a className="nav-link" onClick={(e) => handleNav(e, '/our-team')}>Our Team</a>
                     </li>
                     <li>
-                        <a className="nav-link" onClick={(e) => {scrollTo(e, '.wpt-container', '/'); if(mobile){handleClick(e)}}}>
+                        <a className="nav-link" onClick={(e) => handleNav(e, '/', '.wpt-container')}>
                             Resources
                         </a>
                     </li>
@@ -171,31 +171,21 @@ export default function Navbar(props) {
         </div>
     )
 
-    function scrollTo(e, selector, route) {
-        e.preventDefault();
-        if (route && router.pathname != route) {
-            router.push(route)
+    function scrollTo(selector) {
+        let scrollOptions;
+        let element = document.querySelector(selector)
+        if (element) {
+            scrollOptions = {
+                top: element.offsetTop - 100,
+                left: 0,
+                behavior: 'smooth'
+            }
+        } else {
+            scrollOptions = {
+                top: 0
+            }
         }
-        if (selector !== '') {
-            let retries = 0;
-            const scroll = () => {
-              retries += 1;
-              if (retries > 50) return;
-              const element = document.querySelector(selector);
-              if (element) {
-                setTimeout(() => {
-                    window.scroll({
-                        top: element.offsetTop - 100,
-                        left: 0,
-                        behavior: 'smooth'
-                    })
-                }, 0);
-              } else {
-                setTimeout(scroll, 100);
-              }
-            };
-            scroll();
-          }
+        window.scroll(scrollOptions)
     }
 
     function handleClick() {
@@ -208,10 +198,14 @@ export default function Navbar(props) {
         }
     }
 
-    function handleNav(e, route) {
+    function handleNav(e, route, selector) {
         e.preventDefault();
-        router.push(route);
-        scrollTo(e, 'body')
+        if (route && router.pathname != route) {
+            router.push(route);
+            router.events.on('routeChangeComplete', () => scrollTo(selector))
+        } else {
+            scrollTo(selector);
+        }
         if(mobile) handleClick();
     }
 }

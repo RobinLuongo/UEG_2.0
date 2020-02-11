@@ -21,7 +21,7 @@ function Services() {
     return (
         <div className="services-container">
             <div className="container mission">
-                <p className="default-text">We are a vaules-driven consultancy of higher education executives and first-generation esports program developers. We work with our clients to create innovative esports programs.</p>
+                <p className="default-text">We are a values-driven consultancy of higher education executives and first-generation esports program developers. Our team has over thirty years of experience in higher education program creation. We are veteran gamers who have worked with community colleges, private four-years, state school systems, and K-12 districts to build the first wave of educational esports programs.</p>
                 <Button
                     className="button"
                     text="About Our Team"
@@ -32,14 +32,14 @@ function Services() {
             <div className="container services-text">
                 <h1 className="default-heading">Services</h1>
                 <p className="default-text">
-                Whether you're constructing a strategic plan or already have a program on your campus, Uni can advance your esports initiative at any stage of the process.
+                Whether you are starting to plan or already have a program on campus, Uni can help support your esports initiative.
                 </p>
             </div>
             <div className="cards-container">
                 <div className="bg-container"></div>
                 <div className="cards-inner">
                         <ServiceCard
-                            cardTitle="Esports Data Collection & Analysis"
+                            cardTitle="Esports Data Collection<br />& Analysis"
                             cardImg="/images/Shape1.png"
                             onClick={() => setModalState({
                                 card: "data",
@@ -57,7 +57,7 @@ function Services() {
                         >
                         </ServiceCard>
                         <ServiceCard
-                            cardTitle="Uni On-campus Workshops"
+                            cardTitle="Esports Education Seminars & Webinars"
                             cardImg="/images/Shape3.png"
                             onClick={() => setModalState({
                                 card: "workshops",
@@ -71,7 +71,7 @@ function Services() {
             <div className="container">
                 <ButtonD
                     text="Download Services"
-                    fileName="Uni Esports Group Services Overview"
+                    fileName="UEG Services Overview"
                     downloadPath="/docs/UEG_Services_Overview.pdf"
                 />
             </div>
@@ -137,7 +137,8 @@ function Services() {
     )
 
     function handleButtonClick() {
-        router.push('/our-team')
+        router.push('/our-team');
+        router.events.on('routeChangeComplete', () => window.scroll({top: 0}));
     }
 
 

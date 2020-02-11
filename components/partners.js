@@ -7,7 +7,6 @@ export default function Partners() {
             </p>
             <div className="logos-container">
                 <img className="partner-logo" src="/images/MSI.png"></img>
-                <img className="partner-logo" src="/images/SecretLab.png"></img>
                 <img className="partner-logo" src="/images/Velocity.png"></img>
                 <img className="partner-logo" src="/images/GamerSensei.png"></img>
             </div>

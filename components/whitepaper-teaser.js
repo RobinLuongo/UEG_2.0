@@ -7,12 +7,12 @@ export default function WPTeaser() {
                 <h1 className="default-heading container">The Uni Esports Program Rubric</h1>
             <div className="wp-banner">
                 <div className="container">
-                    <a href="/docs/UEG_Esports_Program_Rubric.pdf" download>
-                        <img src="/images/rubric_thumb.png" className="wp-img" alt="UEG collegiate esports whitepaper - athletic directors"></img>
+                    <a href="/docs/Uni_Esports_Program_Rubric.pdf" download>
+                        <img src="/images/rubric_thumb.png" className="wp-img" alt="UEG collegiate esports rubric"></img>
                     </a>
                     <div className="wp-text">
                         <h3>Lessons From the First Wave: An Empirical Framework for Institutionalizing Esports on Campus</h3>
-                        <p className="default-text">This rubric synthesizes data gained from three in-depth interviews and dozens of conversations with directors of esports programs at institutions of higher education in the US regarding the common obstacles, strategies, and outcomes associated with the launch and growth of a high-quality esports program.</p>
+                        <p className="default-text">This rubric synthesizes data from three interviews and dozens of conversations with directors of esports programs regarding the common obstacles, strategies, and outcomes associated with the growth and launch of a high-quality esports program.</p>
                     </div>
                 </div>
             </div>
@@ -21,7 +21,7 @@ export default function WPTeaser() {
                     className="wp-button"
                     text="Download"
                     fileName="UEG_Program_Rubric.pdf"
-                    downloadPath="/docs/UEG_Esports_Program_Rubric.pdf"
+                    downloadPath="/docs/Uni_Esports_Program_Rubric.pdf"
                 >
                 </Button>
             </div>

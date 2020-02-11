@@ -23,7 +23,7 @@ export default function Hero(props) {
             </div>
             <div className="pillars-container">
                 <div className="container">
-                    <span>Competitive Excellence | Diversity and Inclusion | Student Engagement</span>
+                    <span>Competitive Excellence &nbsp;&nbsp;| &nbsp;&nbsp;Diversity and Inclusion &nbsp;&nbsp;| &nbsp;&nbsp;Student Engagement</span>
                 </div>
             </div>
             <style jsx>{`

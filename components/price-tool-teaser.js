@@ -4,14 +4,14 @@ import Button from './button-download';
 export default function PTTeaser() {
     return (
         <div className="pt-container">
-                <h1 className="default-heading container">The Architects of Collegiate Esports Interviews</h1>
+                <h1 className="default-heading container">The Architects of Collegiate Esports</h1>
             <div className="pt-banner">
                 <div className="container">
                     <div className="pt-text">
                         <h3>Bringing Esports to Campus</h3>
-                        <p className="default-text">In this interview series with Mark Deppe (Director, UC Irvine Esports), Glenn Platt (Director, Miami University Esports), and AJ Dimick (Director, University of Utah Esports), we bring three of the leading voices in collegiate esports together to discuss the process of developing and institutionalizing a collegiate esports program.</p>
+                        <p className="default-text">In this interview series with Mark Deppe (UC Irvine Esports), Glenn Platt (Miami University Esports), and AJ Dimick (University of Utah Esports), we bring three of the leading esports program directors together to discuss the development of a collegiate esports program.</p>
                     </div>
-                    <a href="/docs/UEG_whitepaper_1.pdf" download>
+                    <a href="/docs/The_Architects_of_Collegiate_Esports.pdf" download>
                         <img src="/images/interview_thumb.PNG" className="pt-img" alt="download UEG collegiate esports interviews"></img>
                     </a>
                 </div>
@@ -106,8 +106,4 @@ export default function PTTeaser() {
             `}</style>
         </div>
     )
-
-    function downloadPdf() {
-        //window.open("/docs/UEG_whitepaper_1.pdf");
-    }
 }
