@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/router'
 
 import Button from './button-default';
+import ButtonD from './button-download';
 import ServiceCard from './service-card';
 import ServicesModal from './services-modal';
 import ServicesMobile from './services-mobile';
@@ -31,7 +32,7 @@ function Services() {
             <div className="container services-text">
                 <h1 className="default-heading">Services</h1>
                 <p className="default-text">
-                    Our services touch every level of esports program development. Whether you're beginning the planning process or already have a developed program on your campus, there's some-
+                Whether you're constructing a strategic plan or already have a program on your campus, Uni can advance your esports initiative at any stage of the process.
                 </p>
             </div>
             <div className="cards-container">
@@ -67,6 +68,13 @@ function Services() {
                     </div>
             </div>
             <ServicesMobile />
+            <div className="container">
+                <ButtonD
+                    text="Download Services"
+                    fileName="Uni Esports Group Services Overview"
+                    downloadPath="/docs/UEG_Services_Overview.pdf"
+                />
+            </div>
             <ReactModal
                 isOpen={modalState.isOpen}
                 onRequestClose={() => setModalState({})}

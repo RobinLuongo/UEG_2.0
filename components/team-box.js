@@ -23,7 +23,7 @@ export default function TeamBox(props) {
                     width: 250px;
                     height: 250px;
                     border-radius: 50%;
-                    margin: auto;
+                    margin: 0px auto 15px auto;
                     background-image: url(${props.imgRef});
                 }
                 .alex .headshot {
@@ -42,6 +42,11 @@ export default function TeamBox(props) {
                 }
                 .name {
                     margin-top: 5px;
+                }
+                @media(max-width: 900px) {
+                    .default-text.bio {
+                        font-size: 14px;
+                    }
                 }
             `}</style>
         </div>

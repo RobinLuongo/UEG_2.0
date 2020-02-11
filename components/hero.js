@@ -28,7 +28,7 @@ export default function Hero(props) {
             </div>
             <style jsx>{`
                     .hero-container {
-                        background-image: url("/images/student.jpg");
+                        background-image: url("/images/HERO_BLUE.jpg");
                         background-size: 100% auto;
                         background-position: center;
                         background-repeat: no-repeat;

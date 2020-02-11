@@ -27,7 +27,7 @@ export default function Navbar(props) {
                 </div>
                 <ul className="nav-list">
                     <li>
-                        <a className="nav-link" onClick={(e) => {scrollTo(e, '.mission'); if(mobile){handleClick(e)}}}>
+                        <a className="nav-link" onClick={(e) => {scrollTo(e, '.mission', '/'); if(mobile){handleClick(e)}}}>
                             About
                         </a>
                     </li>
@@ -35,7 +35,7 @@ export default function Navbar(props) {
                         <a className="nav-link" onClick={(e) => handleNav(e, '/our-team')}>Our Team</a>
                     </li>
                     <li>
-                        <a className="nav-link" onClick={(e) => {scrollTo(e, '.wpt-container'); if(mobile){handleClick(e)}}}>
+                        <a className="nav-link" onClick={(e) => {scrollTo(e, '.wpt-container', '/'); if(mobile){handleClick(e)}}}>
                             Resources
                         </a>
                     </li>
@@ -171,10 +171,10 @@ export default function Navbar(props) {
         </div>
     )
 
-    function scrollTo(e, selector) {
+    function scrollTo(e, selector, route) {
         e.preventDefault();
-        if (router.pathname != '/') {
-            router.push('/')
+        if (route && router.pathname != route) {
+            router.push(route)
         }
         if (selector !== '') {
             let retries = 0;
@@ -211,6 +211,7 @@ export default function Navbar(props) {
     function handleNav(e, route) {
         e.preventDefault();
         router.push(route);
+        scrollTo(e, 'body')
         if(mobile) handleClick();
     }
 }

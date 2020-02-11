@@ -7,8 +7,8 @@ export default function WPTeaser() {
                 <h1 className="default-heading container">The Uni Esports Program Rubric</h1>
             <div className="wp-banner">
                 <div className="container">
-                    <a href="/docs/UEG_whitepaper_1.pdf" download>
-                        <img src="/images/whitepaper_thumbnail.jpg" className="wp-img" alt="UEG collegiate esports whitepaper - athletic directors"></img>
+                    <a href="/docs/UEG_Esports_Program_Rubric.pdf" download>
+                        <img src="/images/rubric_thumb.png" className="wp-img" alt="UEG collegiate esports whitepaper - athletic directors"></img>
                     </a>
                     <div className="wp-text">
                         <h3>Lessons From the First Wave: An Empirical Framework for Institutionalizing Esports on Campus</h3>

@@ -8,7 +8,7 @@ export default function PTTeaser() {
             <div className="pt-banner">
                 <div className="container">
                     <div className="pt-text">
-                        <h3>Lessons From the First Wave: An Empirical Framework for Institutionalizing Esports on Campus</h3>
+                        <h3>Bringing Esports to Campus</h3>
                         <p className="default-text">In this interview series with Mark Deppe (Director, UC Irvine Esports), Glenn Platt (Director, Miami University Esports), and AJ Dimick (Director, University of Utah Esports), we bring three of the leading voices in collegiate esports together to discuss the process of developing and institutionalizing a collegiate esports program.</p>
                     </div>
                     <a href="/docs/UEG_whitepaper_1.pdf" download>
