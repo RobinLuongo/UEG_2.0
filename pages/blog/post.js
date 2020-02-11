@@ -12,7 +12,7 @@ function Post(props) {
                 <Head>
                     <title>{props.data.title} | Uni Esports Group</title>
                     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-                    <meta name="description">{props.data.description}</meta>
+                    <meta name="description" content={props.data.description}></meta>
                 </Head>
                 <article>
                     <h1 className="blog-title">{props.data.title}</h1>
