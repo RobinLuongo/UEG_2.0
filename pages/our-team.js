@@ -63,6 +63,6 @@ export default function OurTeam() {
     )
 
     const scrollOnRoute = () => {
-        Router.events.on('routeChangeComplete')
+        Router.events.on('routeChangeComplete', () => window.scroll({top: 0}))
     }
 }

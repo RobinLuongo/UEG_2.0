@@ -14,6 +14,7 @@ export default function ServicesModal(props) {
                                 <li><em>Stakeholder Analysis:  </em><div>Anticipate the landscape of opinions about esports and the opportunities for resource-sharing among stakeholders on campus while bubbling up potential program champions.</div></li>
                                 <li><em>Cost, Facilities & ROI Analysis: </em><div>Understand detailed operational expenses for the esports initiative, ROI opportunities, and floor plan layouts for your esports arena.</div></li>
                                 <li><em>Partnership Procurement: </em><div>We provide a ready-made list of partners in the community who you can tap for support with the esports initiative and make the first contact for you.</div></li>
+                                <li><em>Enrollment & Retention Audit: </em><div>Identify the key opportunities to align esports with your strategic enrollment plan</div></li>
                             </ul>
                         </div>
                         : props.content == 'services' ?
@@ -31,7 +32,7 @@ export default function ServicesModal(props) {
                             :
                                 <div>
                                     <h1 className="default-heading">Bringing esports education to your campus</h1>
-                                    <p className="default-text">s part of our ongoing mission to educate campus decision-makers about collegiate esports, we offer a series of educational presentations and interventions designed to clearly explain the power of esports on campus. Choose from one of our educational presentations and bring us to campus to meet you and your colleagues.</p>
+                                    <p className="default-text">As part of our ongoing mission to educate campus decision-makers about collegiate esports, we offer a series of educational presentations and interventions designed to clearly explain the power of esports on campus. Choose from one of our educational presentations and bring us to campus to meet you and your colleagues.</p>
                                     <ul className="list">
                                         <li><em>Esports 101: Introduction to the Collegiate Space: </em><div>This introductory presentation covers data about the demographics, market, and scope of the global phenomenon of esports.</div></li>
                                         <li><em>The Case for Esports: Educating Stakeholders: </em><div>In this presentation, we articulate the case for esports by working through common objections and misconceptions.</div></li>

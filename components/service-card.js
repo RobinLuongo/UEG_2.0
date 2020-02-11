@@ -4,8 +4,9 @@ export default function ServiceCard(props) {
     return (
         <div className="card-container" onClick={props.onClick}>
             <div className="card-border">
-                <div className="card-title">
-                    {props.cardTitle}
+                <div 
+                    className="card-title" 
+                    dangerouslySetInnerHTML={{__html: props.cardTitle}}>
                 </div>
                 <div className="click-text">click to see more</div>
                 <img className="card-img" src={props.cardImg}></img>
