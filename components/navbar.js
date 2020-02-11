@@ -211,6 +211,6 @@ export default function Navbar(props) {
     function handleNav(e, route) {
         e.preventDefault();
         router.push(route);
-        handleClick();
+        if(mobile) handleClick();
     }
 }
