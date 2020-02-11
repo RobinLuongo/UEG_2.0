@@ -1,6 +1,8 @@
 import TeamBox from '../components/team-box'
+import { useRouter } from 'next/router'
 
 export default function OurTeam() {
+    const Router = useRouter();
     return (
         <div className="container">
             <h1 className="default-heading">Our Team</h1>
@@ -59,4 +61,8 @@ export default function OurTeam() {
             `}</style>
         </div>
     )
+
+    const scrollOnRoute = () => {
+        Router.events.on('routeChangeComplete')
+    }
 }

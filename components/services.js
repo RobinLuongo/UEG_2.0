@@ -21,7 +21,7 @@ function Services() {
     return (
         <div className="services-container">
             <div className="container mission">
-                <p className="default-text">We are a vaules-driven consultancy of higher education executives and first-generation esports program developers. We work with our clients to create innovative esports programs.</p>
+                <p className="default-text">We are a values-driven consultancy of higher education executives and first-generation esports program developers. Our team has over thirty years of experience in higher education program creation. We are veteran gamers who have worked with community colleges, private four-years, state school systems, and K-12 districts to build the first wave of educational esports programs.</p>
                 <Button
                     className="button"
                     text="About Our Team"

@@ -11,7 +11,7 @@ export default function PTTeaser() {
                         <h3>Bringing Esports to Campus</h3>
                         <p className="default-text">In this interview series with Mark Deppe (Director, UC Irvine Esports), Glenn Platt (Director, Miami University Esports), and AJ Dimick (Director, University of Utah Esports), we bring three of the leading voices in collegiate esports together to discuss the process of developing and institutionalizing a collegiate esports program.</p>
                     </div>
-                    <a href="/docs/UEG_whitepaper_1.pdf" download>
+                    <a href="/docs/Uni_Esports_Program_Rubric.pdf" download>
                         <img src="/images/interview_thumb.PNG" className="pt-img" alt="download UEG collegiate esports interviews"></img>
                     </a>
                 </div>
@@ -106,8 +106,4 @@ export default function PTTeaser() {
             `}</style>
         </div>
     )
-
-    function downloadPdf() {
-        //window.open("/docs/UEG_whitepaper_1.pdf");
-    }
 }
