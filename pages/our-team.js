@@ -14,7 +14,7 @@ export default function OurTeam() {
                 />
                 <TeamBox
                     className='team-box jesse'
-                    imgRef='/images/jesse.jpeg'
+                    imgRef='/images/jesse.jpg'
                     name='Jesse Bodony'
                     title='CEO & Co-founder'
                     bio='Jesse treads the line between esports and athletic administration and leadership. Having captained the U23 division of the Colorado Rapids MLS team, led the implementation of Dominican University’s esports program, and gained extensive experience in administration and academic program creation, he understands the process of launching a program from multiple angles. At Uni, Jesse leads internal operations and organizational strategy. He is an avid gamer and former Starcraft II grandmaster.'
