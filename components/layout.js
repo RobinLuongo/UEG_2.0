@@ -62,6 +62,9 @@ export default function Layout(props) {
                 .ReactModal__Overlay {
                     z-index: 1001;
                 }
+                .calendly-overlay .calendly-popup {
+                    max-height: 785px !important;
+                }
                 @media(max-width: 900px) {
                     .default-text {
                         font-size: 14px;
