@@ -1,3 +1,4 @@
+import Head from 'next/head'
 
 import theme from '../components/theme'
 import Navbar from '../components/navbar';
@@ -11,6 +12,13 @@ import Contact from '../components/contact';
 function Home() {
     return (
         <div>
+            <Head>
+                <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+                <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+                <script type="text/javascript" dangerouslySetInnerHTML={{__html: `
+                    Calendly.initBadgeWidget({ url: 'https://calendly.com/uni_jesse', text: "Hey there. This is Jesse, co-founder of Uni Esports. Let's set up a meeting to talk about your program.", color: '#00a2ff', textColor: '#ffffff', branding: false });
+                `}} />
+            </Head>
             <div className="main">
                 <Hero></Hero>
                 <Services></Services>
