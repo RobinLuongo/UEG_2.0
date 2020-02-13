@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 import fetch from 'isomorphic-unfetch';
-import ReactMarkdown from 'react-markdown';
+import ReactMarkdown from 'react-markdown/with-html';
 
 import theme from '../../components/theme'
 
@@ -19,7 +19,7 @@ function Post(props) {
                     <div className="dateline">by {props.data.author} on {props.data.date}</div>
                     <div className="br"></div>
                     <img src={props.data.thumbnail} className="blog-thumb"></img>
-                    <ReactMarkdown source={props.data.body} className="blog-content"/>
+                    <ReactMarkdown source={props.data.body} className="blog-content" escapeHtml={false}/>
                 </article>
                 <style>{`
                     article {
