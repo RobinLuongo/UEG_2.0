@@ -40,7 +40,10 @@ export default function Navbar(props) {
                         </a>
                     </li>
                     <li>
-                        <a className="nav-link" onClick={(e) => handleNav(e, '/blog/2020-02-06-the-uni-esports-program-rubric')}>Blog</a>
+                        <a className="nav-link" onClick={(e) => handleNav(e, '/blog/2020-02-13-the-uni-esports-blog')}>Blog</a>
+                    </li>
+                    <li>
+                        <a className="nav-link" onClick={(e) => handleNav(e, '/blog/2020-02-13-collegiate-esports-program-case-studies')}>Case Study</a>
                     </li>
                 </ul>
             </div>

@@ -59,6 +59,10 @@ function Post(props) {
                         line-height: 1.5;
                         color: #4c4c4c;
                     }
+                    .blog-content > ul {
+                        line-height: 1.5;
+                        color: #4c4c4c;
+                    }
                     .blog-content a {
                         color: inherit;
                     }
