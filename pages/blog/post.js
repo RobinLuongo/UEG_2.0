@@ -72,6 +72,9 @@ function Post(props) {
                     .blog-content a {
                         color: inherit;
                     }
+                    .blog-content img {
+                        width: 100%;
+                    }
                 `}</style>
             </>
         )
