@@ -13,6 +13,11 @@ function Post(props) {
                     <title>{props.data.title} | Uni Esports Group</title>
                     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
                     <meta name="description" content={props.data.description}></meta>
+                    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+                    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+                    <script type="text/javascript" dangerouslySetInnerHTML={{__html: `
+                        Calendly.initBadgeWidget({ url: 'https://calendly.com/uni_alex', text: "Questions about bringing esports to campus? Let's schedule a time to talk.", color: '#00a2ff', textColor: '#ffffff', branding: false });
+                    `}} />
                 </Head>
                 <article>
                     <h1 className="blog-title">{props.data.title}</h1>
@@ -26,6 +31,7 @@ function Post(props) {
                         margin: auto;
                         max-width: 800px;
                         padding: 0px 30px;
+                        margin-bottom: 100px;
                     }
                     .blog-title {
                         font-size: 46px;
